@@ -1,0 +1,21 @@
+<h2>{{categoria.nome}}</h2>
+
+{{#each postagens}}
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>-- {{titulo}} --</h4>
+            <p>{{descricao}}</p>
+            <hr>
+            <small>{{categoria.nome}} - {{data}}</small>
+            <a href="/postagem/{{slug}}">
+              <button class="btn btn-outline-primary float-right">Leia mais</button>
+            </a>
+        </div>
+    </div>
+
+{{else}}
+
+    <h4 class="mt-3">Nenhuma postagem recente recente.</h4>
+
+{{/each}}

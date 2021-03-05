@@ -1,0 +1,19 @@
+{{#if erro}}
+    <div class="alert alert-danger">{{erro}}</div>
+{{/if}}
+
+<h3>Nova Categoria:</h3>
+
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/categorias/novaCategoria" method="post">
+            <label for="nome"> Nome: </label>
+            <input type="text" placeholder="Nome da Categoria" name="nome" id="nome" class="form-control" required>
+
+            <label for="slug"> Slug: </label>
+            <input type="text" placeholder="Slug da Categoria" name="slug" id="slug" class="form-control" required>
+
+            <button type="submit" class="btn btn-success mt-3">Criar Categoria</button>
+        </form>
+    </div>
+</div>
